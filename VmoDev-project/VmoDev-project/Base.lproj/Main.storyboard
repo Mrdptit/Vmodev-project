@@ -40,13 +40,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="asr-qF-YVN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="F9L-aC-NDi"/>
                     <connections>
                         <outlet property="collectionView" destination="mEw-pj-dCL" id="c10-eZ-FVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCj-ot-LUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="-218"/>
+            <point key="canvasLocation" x="4271.0144927536239" y="-218.30357142857142"/>
         </scene>
     </scenes>
 </document>

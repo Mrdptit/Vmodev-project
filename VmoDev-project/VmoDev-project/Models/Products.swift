@@ -8,11 +8,15 @@
 
 import UIKit
 class Products {
-    var image : UIImage?
+    var image : Data?
     var title : String?
     var description : String?
     var titleButton : String?
     
-    required init?() {}
-    
+    init(title : String, image:Data, description : String, titleButton: String) {
+           self.title = title
+           self.image = image
+        self.description = description
+        self.titleButton = titleButton
+       }
 }
