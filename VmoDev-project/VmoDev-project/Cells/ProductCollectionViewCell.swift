@@ -9,14 +9,19 @@
 import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var cardView: UIView!
+    
     @IBOutlet weak var img: UIImageView!
+    
     @IBOutlet weak var titleLb: UILabel!
+    
     @IBOutlet weak var descripLb: UILabel!
     
     @IBOutlet weak var titleBtton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = .white
     }
 
 }

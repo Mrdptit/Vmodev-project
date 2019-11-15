@@ -20,6 +20,7 @@ let productCollectionViewCellId = "ProductCollectionViewCell"
         
        //register cell
         let nibCell = UINib(nibName: productCollectionViewCellId, bundle: nil )
+        
         collectionView.register(nibCell,forCellWithReuseIdentifier: productCollectionViewCellId )
         // init data
         products =
@@ -30,7 +31,7 @@ let productCollectionViewCellId = "ProductCollectionViewCell"
             Products(title: "Have any ideas?", image:(UIImage(named: "3")?.pngData())!, description: "We'd love to hear it. What would you like to see in this app?",titleButton: "Submit IDEA")
         ]
             collectionView.reloadData()
-        setupMenuBar()
+       setupMenuBar()
     }
     
     let menuBar: MenuBar = {
@@ -47,7 +48,7 @@ let productCollectionViewCellId = "ProductCollectionViewCell"
 }
 
 // Code for collectionView
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -57,11 +58,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return products.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
+        return UIEdgeInsets(top: 32, left: 32, bottom: 32, right: 32)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 352)
+        return CGSize(width: collectionView.bounds.size.width - 64, height: 400)
     }
     
     		
@@ -78,9 +79,5 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = products[indexPath.row]
         print("\(indexPath.row) - \(product.title) ")
-    }
-    
-    func setTitle(_ title : String?, for state : UIControl.State)   {
-
     }
 }
